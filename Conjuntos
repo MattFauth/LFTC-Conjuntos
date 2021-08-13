@@ -1,0 +1,38 @@
+bd = {}
+
+class Conjunto():
+
+    def __init__(self):
+        self.elementos = []
+        self.nome = None
+        self.tamanho = 0
+
+    def __str__(self):
+        return str(self.elementos)
+
+    def tamanho(self):
+        print("|" + self.nome + "|", "=", self.tamanho)
+
+    def contem(self, valor):
+        listaElementos = self.limpar(str(self.elementos))
+
+        elemento = str(valor)
+        elemento = self.limpar(elemento)
+        if elemento in listaElementos:
+            print("O conjunto:", elemento,
+                  "está contido no conjunto:", listaElementos)
+            return True
+        else:
+            print("O conjunto:", elemento,
+                  "não está contido no conjunto:", listaElementos)
+            return False
+
+    def possui(self, valor):
+        listaElementos = self.limpar(str(self.elementos))
+
+        elemento = str(valor)
+        elemento = self.limpar(elemento)
+        if elemento in listaElementos:
+            print(elemento, "pertence ao conjunto:", listaElementos)
+        else:
+            print(elemento, "não pertence ao conjunto", listaElementos)
