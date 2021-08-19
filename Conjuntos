@@ -11,7 +11,7 @@ class Conjunto():
         return str(self.elementos)
 
     def tamanho(self):
-        print("|" + self.nome + "|", "=", self.tamanho)
+        return self.tamanho
 
     def contem(self, valor):
         listaElementos = self.limpar(str(self.elementos))
